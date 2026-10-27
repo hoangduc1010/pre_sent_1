@@ -49,15 +49,8 @@ endfunction()
 # Flutter library and tool build rules.
 set(FLUTTER_MANAGED_DIR "${CMAKE_CURRENT_SOURCE_DIR}/flutter")
 add_subdirectory(${FLUTTER_MANAGED_DIR})
-# ----------------------------------------------------------------------
-# Cấu hình APPLICATION_ID theo flavor
-if(DEFINED FLUTTER_APP_FLAVOR)
-  if(FLUTTER_APP_FLAVOR STREQUAL "staging")
-    set(APPLICATION_ID "com.example.staging")
-  elseif(FLUTTER_APP_FLAVOR STREQUAL "production")
-    set(APPLICATION_ID "com.example.production")
-  endif()
-endif()
+
+
 
 # System-level dependencies.
 find_package(PkgConfig REQUIRED)
